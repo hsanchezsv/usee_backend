@@ -1,0 +1,33 @@
+
+sudo apt-get -y --force-yes install pkg-config libgl1-mesa-dev libgles2-mesa-dev \
+libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev python-setuptools git-core \
+libgstreamer1.0-dev gstreamer1.0-plugins-{bad,base,good,ugly} \
+gstreamer1.0-{omx,alsa} python-dev
+
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+
+Install a new enough version of Cython:
+
+sudo pip install -U Cython==0.25.2
+Install Kivy globally on your system:
+
+sudo pip install git+https://github.com/kivy/kivy.git@master
+
+param=rotation=270,param=invert_y=1
+,param=rotation=90,param=invert_x=1
+
+
+Configuraciones en /boot/config.txt
+
+disable_splash=1
+lcdrotate = 1
+gpu_mem=128
+
+Configuraciones en /boot/cmdline.txt
+logo.nologo
+
+sudo crontab -e 
+@reboot sudo python /home/mbdj/dashboard/shutdown2.py
+
+/mnt/milogo.jpg
